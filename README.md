@@ -13,7 +13,7 @@
 2. Login: [Azure Portal](https://portal.azure.com)
 
 ### Prepare Vulnerability Management Scanner
-<img width="890" alt="image" src="Images/Screenshot 2024-07-15 210000.png">
+<img width="890" alt="image" src="Screenshot 2024-07-15 210000.png">
 
 1. Go to [Azure Portal](https://portal.azure.com)
 2. Navigate to the Marketplace and search for "OpenVAS secured and supported by HOSSTED"
