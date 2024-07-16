@@ -1,7 +1,5 @@
 # Greenbone-VS_OpenVAS
 
-# Greenbone-VS_OpenVAS
-
 ## Project Outline: OpenVas Vulnerability Management - Powered by Azure
 
 ### Prerequisites
@@ -9,7 +7,7 @@
 - Azure Account - Possible to do with Free Subscription
 
 ### Create our Free Azure Account
-<img width="886" alt="image" src="Images\Screenshot 2024-07-15 205748.png">
+<img width="886" alt="image" src="Screenshot 2024-07-15 205748.png">
 
 1. Sign up: [Azure Free Account](https://azure.microsoft.com/en-us/free/)
 2. Login: [Azure Portal](https://portal.azure.com)
@@ -31,7 +29,7 @@
 8. Wait until the deployment of OpenVAS is complete.
 
 ### Create Client Virtual Machine and Make it Vulnerable
-<img width="752" alt="image" src="Images/Screenshot 2024-07-15 213404.png">
+<img width="752" alt="image" src="Screenshot 2024-07-15 213404.png">
 
 1. Go to [Azure Portal](https://portal.azure.com)
 2. Search for Virtual Machines and create a new Virtual Machine.
@@ -55,7 +53,7 @@
    - Restart the VM.
 
 ### Configure OpenVAS to Perform First Unauthenticated Scan against our Vulnerable VM
-<img width="730" alt="image" src="Images\Screenshot 2024-07-15 223616.png">
+<img width="730" alt="image" src="Screenshot 2024-07-15 223616.png">
 
 1. Login to OpenVAS and navigate to Assets > Hosts > New Host.
 2. Add the Client VM PRIVATE IP Address.
@@ -70,7 +68,7 @@
 9. Take note of the Tabs, especially the "Results" tab.
 
 ### Make Configurations for Credentialed Scans (Within VM)
-<img width="508" alt="image" src="Images\Screenshot 2024-07-15 223818.png">
+<img width="508" alt="image" src="Screenshot 2024-07-15 223818.png">
 
 1. Disable Windows Firewall.
 2. Disable User Account Control.
@@ -86,7 +84,7 @@
 5. Restart the VM.
 
 ### Make Configurations for Credentialed Scans (OpenVAS)
-<img width="722" alt="image" src="Images\Screenshot 2024-07-15 223951.png">
+<img width="722" alt="image" src="Screenshot 2024-07-15 223951.png">
 
 1. Go to Configuration > Credentials > New Credential.
 2. Name / Comment: "Azure VM Credentials".
@@ -101,9 +99,9 @@
 11. Save.
 
 ### Execute Credentialed Scan against our Vulnerable Windows VM
-<img width="1126" alt="image" src="Images\Screenshot 2024-07-15 224019.png">
+<img width="1126" alt="image" src="Screenshot 2024-07-15 224019.png">
 
-<img width="861" alt="image" src="Images\Screenshot 2024-07-15 224219.png">
+<img width="861" alt="image" src="Screenshot 2024-07-15 224219.png">
 
 1. Within Greenbone / OpenVAS, go to Scans > Tasks.
 2. CLONE the "Scan - Azure Vulnerable VMs" Task and Edit it.
@@ -113,7 +111,7 @@
 6. Click the Play button to launch the new Credentialed Scan and wait for it to finish.
 
 ### Remediate Vulnerabilities
-<img width="799" alt="image" src="Images\Screenshot 2024-07-15 225446.png">
+<img width="799" alt="image" src="Screenshot 2024-07-15 225446.png">
 
 1. Log back into your Win10-Vulnerable VM.
 2. Uninstall Adobe Reader, VLC Player, and Firefox.
@@ -121,7 +119,7 @@
 4. Re-initiate the "Scan - Azure Vulnerable VMs - Credentialed" scan and observe the results.
 
 ### Verify Remediations
-<img width="1120" alt="image" src="Images\Screenshot 2024-07-15 225524.png">
+<img width="1120" alt="image" src="Screenshot 2024-07-15 225524.png">
 
 1. Note that there are no longer Vulnerabilities for FireFox, VLC Player, or Adobe Reader!
 
